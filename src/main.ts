@@ -29,7 +29,6 @@ const createHtml = (theMovieList: Movie[]) => {
 
   if (moviesContainer) {
     moviesContainer.innerHTML = "";
-  }
 
   theMovieList.forEach((movies) => {
      const container = document.createElement("div");
@@ -48,6 +47,7 @@ const createHtml = (theMovieList: Movie[]) => {
     container.appendChild(title);
     container.appendChild(imgContainer);
 
+
     moviesContainer?.appendChild(container);
 
   });
@@ -56,6 +56,7 @@ const createHtml = (theMovieList: Movie[]) => {
 document.getElementById("getButton")?.addEventListener("click", async () => {
   
     const inputTag = document.getElementById("titleToSearchFor");
+======
 
     if(!inputTag) {
       return;
