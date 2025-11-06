@@ -15,9 +15,6 @@ type OmdbResponse = {
 
 
 
-
-
-
 const getMovies = async (titleToSearchFor:string) => {
    const response = await fetch("https://omdbapi.com/?apikey=416ed51a&s=" + titleToSearchFor,);
    const data: OmdbResponse = await response.json();
