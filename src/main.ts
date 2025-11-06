@@ -5,8 +5,9 @@ import './style.css'
 
 
 class planet {
-  static forEach(arg0: (planet: string) => void) {
-    throw new Error('Method not implemented.');
+  static forEach(callback: (planet: string) => void) {
+    const planets = ['Mercury', 'Venus', 'Earth', 'Mars'];
+    planets.forEach(callback);
   }
   planet:string;
 
@@ -17,12 +18,15 @@ class planet {
 
 }
 
-planet.forEach((planet:string) => {
+planet.forEach((p:string) => {
   const planetContainer = document.createElement("div");
   const name = document.createElement("h1");
 
 
-  name.innerHTML = name.planets;
+  name.textContent = p;
+  planetContainer.appendChild(name);
+  document.body.appendChild(planetContainer);
+});
 
 });
   
