@@ -2,8 +2,6 @@ import './style.css'
 
 
 
-
-
 class planet {
   static forEach(arg0: (planet: string) => void) {
     throw new Error('Method not implemented.');
