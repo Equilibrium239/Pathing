@@ -39,34 +39,4 @@ const createHtml = (theMovieList: Movie[]) => {
 
      container.className ="movie";
 
-    title.innerHTML = movies.Title
-    img.src = movies.Poster
-    img.alt = movies.Title
-    imgContainer.appendChild(img);
-
-    container.appendChild(title);
-    container.appendChild(imgContainer);
-
-
-    moviesContainer?.appendChild(container);
-
-  });
-};  
-
-document.getElementById("getButton")?.addEventListener("click", async () => {
-  
-    const inputTag = document.getElementById("titleToSearchFor");
-======
-
-    if(!inputTag) {
-      return;
-    }
-    // Hitta texten i textrutan
-  const userInput = (inputTag as HTMLInputElement).value
  
- 
- 
-  const movies = await getMovies(userInput);
-  
-  createHtml(movies);
-});
