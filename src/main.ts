@@ -22,7 +22,5 @@ planet.forEach((planet:string) => {
   const name = document.createElement("h1");
 
 
-  name.innerHTML = name.planets;
+  name.innerHTML = planet;
 
-});
-  
